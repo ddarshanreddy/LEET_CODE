@@ -14,10 +14,7 @@ public:
        {
         return 1;
        }
-       else if((source[0]==target[1]) && (source[1]==target[0]))
-       {
-        return 1;
-       }
+     
        else if(rowdiff == coldiff)
        {
         return 1;
