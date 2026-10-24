@@ -1,19 +1,19 @@
 bool validateStackSequences(int* pushed, int pushedSize, int* popped, int poppedSize) {
     int stack[1000];
-    int top = -1;
-    int j = 0;
+    int top =-1;
+    int n= 0;
 
-    for (int i = 0; i < pushedSize; i++)
+    for (int i = 0;i < pushedSize;i++)
     {
-        stack[++top] = pushed[i];
+        stack[++top]=pushed[i];
 
-        while (top>=0 && stack[top] == popped[j])
+        while (top>=0 && stack[top] == popped[n])
         {
             top--;
-            j++;
+            n++;
         }
     }
 
-    return j == poppedSize;
+    return n== poppedSize;
 
 }
